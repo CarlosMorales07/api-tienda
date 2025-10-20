@@ -1,98 +1,150 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+Ya que la imagen de las relaciones no cargo, utilice un ejemplo par poder cumplir con la pregunta planteada 
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+# API REST - Tienda
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+API REST completa construida con NestJS, TypeORM y PostgreSQL para gestión de tienda.
 
-## Description
+## 🚀 Características
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+- CRUD completo para Usuarios, Categorías, Productos y Órdenes
+- Validación de datos con class-validator
+- Documentación automática con Swagger
+- Base de datos PostgreSQL con TypeORM
+- Relaciones entre entidades
 
-## Project setup
+## 📋 Requisitos Previos
 
+- Node.js (v18 o superior)
+- PostgreSQL (v14 o superior)
+- npm o yarn
+
+## 🔧 Instalación
+
+1. Clonar el repositorio:
 ```bash
-$ npm install
+git clone <URL_DE_TU_REPO>
+cd api-tienda
 ```
 
-## Compile and run the project
-
+2. Instalar dependencias:
 ```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+npm install
 ```
 
-## Run tests
+3. Crear archivo `.env` en la raíz del proyecto:
+```env
+# Base de datos
+DB_HOST=localhost
+DB_PORT=5432
+DB_USERNAME=postgres
+DB_PASSWORD=tu_password
+DB_DATABASE=api_tienda
 
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+# Puerto de la aplicación
+PORT=3000
 ```
 
-## Deployment
-
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
-
-```bash
-$ npm install -g @nestjs/mau
-$ mau deploy
+4. Crear la base de datos en PostgreSQL:
+```sql
+CREATE DATABASE api_tienda;
 ```
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+## ▶️ Ejecución
 
-## Resources
+### Modo desarrollo
+```bash
+npm run start:dev
+```
 
-Check out a few resources that may come in handy when working with NestJS:
+### Modo producción
+```bash
+npm run build
+npm run start:prod
+```
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+La aplicación estará disponible en: `http://localhost:3000`
 
-## Support
+## 📚 Documentación API
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+Una vez iniciada la aplicación, accede a la documentación Swagger en:
 
-## Stay in touch
+```
+http://localhost:3000/api/docs
+```
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+## 🗂️ Estructura del Proyecto
 
-## License
+```
+src/
+├── config/           # Configuración de la aplicación
+├── users/            # Módulo de usuarios
+├── categories/       # Módulo de categorías
+├── products/         # Módulo de productos
+├── orders/           # Módulo de órdenes
+├── app.module.ts     # Módulo principal
+└── main.ts           # Punto de entrada
+```
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+## 🔗 Endpoints Principales
+
+### Users
+- `GET /users` - Obtener todos los usuarios
+- `GET /users/:id` - Obtener un usuario
+- `POST /users` - Crear usuario
+- `PATCH /users/:id` - Actualizar usuario
+- `DELETE /users/:id` - Eliminar usuario
+
+### Categories
+- `GET /categories` - Obtener todas las categorías
+- `GET /categories/:id` - Obtener una categoría
+- `POST /categories` - Crear categoría
+- `PATCH /categories/:id` - Actualizar categoría
+- `DELETE /categories/:id` - Eliminar categoría
+
+### Products
+- `GET /products` - Obtener todos los productos
+- `GET /products?categoryId=<id>` - Filtrar por categoría
+- `GET /products/:id` - Obtener un producto
+- `POST /products` - Crear producto
+- `PATCH /products/:id` - Actualizar producto
+- `DELETE /products/:id` - Eliminar producto
+
+### Orders
+- `GET /orders` - Obtener todas las órdenes
+- `GET /orders?userId=<id>` - Filtrar por usuario
+- `GET /orders/:id` - Obtener una orden
+- `POST /orders` - Crear orden
+- `PATCH /orders/:id` - Actualizar orden
+- `DELETE /orders/:id` - Eliminar orden
+
+## 🛠️ Tecnologías
+
+- [NestJS](https://nestjs.com/) - Framework backend
+- [TypeORM](https://typeorm.io/) - ORM
+- [PostgreSQL](https://www.postgresql.org/) - Base de datos
+- [Swagger](https://swagger.io/) - Documentación API
+- [Class Validator](https://github.com/typestack/class-validator) - Validación
+
+## 📦 Dependencias Principales
+
+```json
+{
+  "@nestjs/common": "^10.0.0",
+  "@nestjs/core": "^10.0.0",
+  "@nestjs/typeorm": "^10.0.0",
+  "@nestjs/swagger": "^7.0.0",
+  "typeorm": "^0.3.17",
+  "pg": "^8.11.3",
+  "class-validator": "^0.14.0",
+  "class-transformer": "^0.5.1"
+}
+```
+
+
+## 👤 Autor
+
+Carlos Morales - [GitHub](https://github.com/CarlosMorales07)
+
+## 📄 Licencia
+
+MIT
